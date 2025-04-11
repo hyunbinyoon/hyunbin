@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제있노?</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f5efe6;
+      color: #3f2f1d;
+    }
+    header {
+      background-color: #8b5e3c;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    nav a {
+      margin-left: 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .book-img {
+      width: 100%;
+      height: 180px;
+      background-color: #ddd;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/29/29302.png');
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .book-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .book-price {
+      color: #8b5e3c;
+      font-weight: bold;
+      margin-top: 0.3rem;
+    }
+    .book-school {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/yourusername/munjeitno/main/logo.png" alt="문제있노 로고">
+      <strong>문제있노?</strong>
+    </div>
+    <nav>
+      <a href="#">중고거래</a>
+      <a href="#">캐시 충전</a>
+      <a href="#">학교 설정</a>
+      <a href="#">커뮤니티</a>
+      <a href="#">로그인</a>
+    </nav>
+  </header>  <main>
+    <div class="title">중고책 거래 목록</div>
+    <div class="grid">
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">미적분의 정석</div>
+        <div class="book-price">₩5,000</div>
+        <div class="book-school">포항제철고</div>
+      </div>
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">영어독해연습</div>
+        <div class="book-price">₩4,000</div>
+        <div class="book-school">포항고</div>
+      </div>
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">수능국어 기출</div>
+        <div class="book-price">₩3,500</div>
+        <div class="book-school">포항여고</div>
+      </div>
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">화학 I 개념완성</div>
+        <div class="book-price">₩6,000</div>
+        <div class="book-school">포항고</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
