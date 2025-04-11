@@ -1,15 +1,16 @@
-# hyunbin
-<!DOCTYPE html><html lang="ko">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>문제있노?</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f1e7;
-      color: #3e2f1c;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f5efe6;
+      color: #3f2f1d;
     }
     header {
       background-color: #8b5e3c;
@@ -18,6 +19,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
     }
     nav a {
       margin-left: 1rem;
@@ -28,99 +39,103 @@
     nav a:hover {
       text-decoration: underline;
     }
-    section {
+    main {
       padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #8b5e3c;
-      padding-bottom: 0.5rem;
+    .title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
     }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    input, textarea, select, button {
-      margin: 0.5rem 0;
-      padding: 0.5rem;
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .book-img {
       width: 100%;
-      max-width: 500px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
+      height: 180px;
+      background-color: #ddd;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/29/29302.png');
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
     }
-    button {
-      background-color: #8b5e3c;
-      color: white;
-      cursor: pointer;
+    .book-title {
+      font-size: 1.2rem;
+      font-weight: bold;
     }
-    button:hover {
-      background-color: #734a2e;
+    .book-price {
+      color: #8b5e3c;
+      font-weight: bold;
+      margin-top: 0.3rem;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-    li {
-      margin: 0.5rem 0;
+    .book-school {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div><strong>문제있노?</strong></div>
+    <div class="logo">
+      <img src="logo.png" alt="문제있노 로고">
+      <strong>문제있노?</strong>
+    </div>
     <nav>
-      <a href="#market">중고거래</a>
-      <a href="#cash">캐시 충전</a>
-      <a href="#school">학교 설정</a>
-      <a href="#community">커뮤니티</a>
-      <a href="#login">로그인</a>
+      <a href="#">중고거래</a>
+      <a href="#">캐시 충전</a>
+      <a href="#">학교 설정</a>
+      <a href="#">커뮤니티</a>
+      <a href="#">로그인</a>
     </nav>
-  </header>  <main class="container">
-    <section id="market">
-      <div class="section-title">중고거래</div>
-      <p>여기서 원하는 중고책을 사고팔 수 있어요.</p>
-      <h3>희망 책 목록</h3>
-      <ul>
-        <li>미적분의 정석</li>
-        <li>영어 독해 연습</li>
-        <li>수능 국어 기출 문제집</li>
-        <li>화학 I 개념 완성</li>
-      </ul>
-    </section><section id="cash">
-  <div class="section-title">캐시 충전</div>
-  <p>거래에 사용할 캐시를 충전할 수 있어요.</p>
-  <input type="number" placeholder="충전할 금액 입력 (₩)">
-  <button>충전하기</button>
-</section>
+  </header>
 
-<section id="school">
-  <div class="section-title">학교 설정</div>
-  <select>
-    <option>학교를 선택하세요</option>
-    <option>포항고등학교</option>
-    <option>포항여자고등학교</option>
-    <option>포항제철고등학교</option>
-    <option>기타</option>
-  </select>
-  <button>설정하기</button>
-</section>
-
-<section id="community">
-  <div class="section-title">커뮤니티</div>
-  <p>질문, 후기, 정보 나눔 등 다양한 소통이 가능합니다.</p>
-  <textarea placeholder="게시글을 입력하세요..."></textarea>
-  <button>게시하기</button>
-</section>
-
-<section id="login">
-  <div class="section-title">로그인</div>
-  <input type="text" placeholder="아이디">
-  <input type="password" placeholder="비밀번호">
-  <button>로그인</button>
-</section>
-
+  <main>
+    <div class="title">중고책 거래 목록</div>
+    <div class="grid">
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">미적분의 정석</div>
+        <div class="book-price">₩5,000</div>
+        <div class="book-school">포항제철고</div>
+      </div>
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">영어독해연습</div>
+        <div class="book-price">₩4,000</div>
+        <div class="book-school">포항고</div>
+      </div>
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">수능국어 기출</div>
+        <div class="book-price">₩3,500</div>
+        <div class="book-school">포항여고</div>
+      </div>
+      <div class="card">
+        <div class="book-img"></div>
+        <div class="book-title">화학 I 개념완성</div>
+        <div class="book-price">₩6,000</div>
+        <div class="book-school">포항고</div>
+      </div>
+    </div>
   </main>
 </body>
 </html>
